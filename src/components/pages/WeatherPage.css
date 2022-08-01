@@ -1,0 +1,55 @@
+.weather-page {
+    margin-top: 2vh;
+    height: calc(100vh - var(--navbar-height));    
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 3;
+
+    --button-margins-side: 5rem;
+    --button-border-radius: .5rem;
+    --button-border: transparent;
+}
+
+.weather-choices {
+    grid-area: 'one';
+    background-color: blue;
+    grid-row: 1 / span 2;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: .5rem;    
+}
+.city-choice {
+    margin: 0 2rem;
+    border: transparent;
+    border-radius: .3rem;    
+}
+.sevenday {
+    margin: 0 var(--button-margins-side);
+    border: var(--button-border);
+    border-radius: var(--button-border-radius);    
+    align-self: stretch;    
+}
+.tenday {
+    margin: 0 var(--button-margins-side);
+    border: var(--button-border);
+    border-radius: var(--button-border-radius);   
+    align-self: stretch;
+}
+
+.weather-calculations {
+    grid-area: 'two';
+    background-color: aqua;
+    grid-row: 3;
+}
+
+.graph-display {
+    grid-area: 'three';
+    background-color: grey;
+    grid-row: 1 / span 3;
+    grid-column: 2 / span 3;
+}
+

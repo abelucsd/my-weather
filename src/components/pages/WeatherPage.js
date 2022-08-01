@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Average from '../Average'
 import BarGraph from '../BarGraph'
+import './WeatherPage.css'
 
 function WeatherPage() {
     const [theAPI, setTheAPI] = useState('')
@@ -24,8 +25,8 @@ function WeatherPage() {
         <div className="weather-choices">
             <input type="text" className='city-choice' placeholder='City' />
             <>Selected City</>
-            <button onClick={selectSevenDay}>7 Day</button>
-            <button onClick={selectTenDay}>10 Day</button>
+            <button onClick={selectSevenDay} className='sevenday'>7 Day</button>
+            <button onClick={selectTenDay} className='tenday'>10 Day</button>
         </div>
         <div className="weather-calculations">
             <>Pass props to Average</>

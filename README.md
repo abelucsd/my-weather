@@ -28,3 +28,10 @@
 - Additionals?:
     * Use a locator to have a default city
     * F to C
+
+### Sprint Order
+- Make the backend
+- Order the page cells
+- Calculate Average Data from the API data
+- Be able to pass requests from user into the API (city, buttons)
+- Bar graph
