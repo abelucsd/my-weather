@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "* Key: a0ffc6e3ebe075e5008482692a1bd602\r * API Call: api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}\r * api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid=a0ffc6e3ebe075e5008482692a1bd602\r * i.e. : api.openweathermap.org/data/2.5/forecast?lat=35&lon=139&appid={API key}",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "install": "^0.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
