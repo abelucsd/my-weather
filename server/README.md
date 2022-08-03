@@ -3,7 +3,7 @@
 * Key: REACT_APP_WEATHER_API_KEY
 * API Call: api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API KEY}
 * api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API KEY}
-* i.e. : api.openweathermap.org/data/2.5/forecast?lat=35&lon=139&appid={API KEY}}
+* i.e. : http://api.openweathermap.org/data/2.5/forecast?lat=35&lon=139&appid={API KEY}}
 
 #### Deconstructing the API Data
 

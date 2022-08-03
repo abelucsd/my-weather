@@ -31,7 +31,7 @@ app.post('/get_geo', (req, res) => {
         })
         .catch(function (error) {
             // handle error
-            console.log("An error in axios portion of app /get_geo.")
+            console.log("An error in axios portion of app /get_geo.")            
             res.json({"users": ["An error in axios portion of app /get_geo."]})
         })    
 })
@@ -43,8 +43,23 @@ app.post('/get_city_data', (req, res) => {
     console.log(`Inside get_city_data lat = ${lat}, lon = ${lon}`)
     
     axios.get(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`)
-    .then(function (response) {
-        console.log(response)
+    .then(function (response) {        
+        // today's date                
+        let temperature_data = response.data.list
+        let temps = []
+        let humids = []
+        ret_val = {}
+        temperature_data.forEach((temp_data) => {
+            ret_val[temp_data["dt_txt"]] = []                       
+            ret_val[temp_data["dt_txt"]].push({
+                temperature: temp_data.main.temp,
+                humidity: temp_data.main.humidity
+            })      
+        })     
+
+        console.log(ret_val)
+
+        res.send(ret_val)
     })
     .catch(function (error) {
         console.log(error)
