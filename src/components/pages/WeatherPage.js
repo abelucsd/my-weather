@@ -124,7 +124,7 @@ function WeatherPage() {
             <Average weatherData={weatherData} />
         </div>
         <div className="graph-display">
-            <BarGraph weatherData />
+            <BarGraph weatherData={weatherData} />
         </div>
 
     </div>
