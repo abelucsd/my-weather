@@ -1,0 +1,7 @@
+.my-chart {
+    height: 90vh;    
+}
+
+.bar-graph {
+    height: calc(100vh - var(--navbar-height));
+}
