@@ -1,4 +1,13 @@
 .navbar {
+    display: flex;    
     height: var(--navbar-height);
     background-color: black;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.title {    
+    margin: 0 1rem;
+    color: white;    
+    font-size: 1.2rem;
 }

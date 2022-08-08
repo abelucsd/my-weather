@@ -4,9 +4,8 @@ import Navbar from './Navbar';
 import WeatherPage from './components/pages/WeatherPage';
 
 /**
- * Add A router later
+ * Add A router later for scale.
  */
-
 function App() {
   return (
     <div className="App">

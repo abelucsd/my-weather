@@ -5,12 +5,29 @@ import './Average.css'
  * weatherData:
  *  An array of [date, [temperature, humidity]]
  */
+
+
+/**
+ * Calculates the average temperature and humidity.
+ * 
+ * @param {
+ * weatherData: list [
+ *  date, 
+ *    [
+ *      temperature,
+ *      humidity
+ *    ] - 3 hour increments
+ *  ]
+ * } props  
+ * 
+ * @returns Grid of average temperature and humidity
+ */
 function Average(props) {
   const [theAverage, setTheAverage] = useState(0)
   const [humidity, setHumidity] = useState(0)
 
   /**
-   * Calculate the average among the 3 hour iterations
+   * Calculate the average temperature and humidty.   
    */
   function calcAverage() {
     let total_temp = 0
@@ -24,10 +41,9 @@ function Average(props) {
     setHumidity(Math.floor(total_hum/props.weatherData.length))
   }  
 
-  useEffect(() => { 
-    console.log(props.weatherData)   
+  useEffect(() => {      
     calcAverage()
-  },)
+  }, [props])
 
   return (
     <div className="average-page">

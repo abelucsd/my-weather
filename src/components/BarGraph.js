@@ -4,20 +4,25 @@ import Chart from 'chart.js/auto'
 import './BarGraph.css'
 
 /**
- * props:
- * - weatherData[date ,[temperature, humidity]]
+ * Plots temperature onto a line graph.
+ * 
+ * @param {
+ * weatherData: list [date, [temperature, humidity]]
+ * } props  
+ * 
+ * @returns A line graph.
  */
 function BarGraph(props) {
   const [chart, setChart] = useState('')
 
   /**
-   * Initializes a new chart each weather data query
+   * Initializes a new chart each weather data query.
    * myChart:
    * - label: Temperature
    * - data: [] # temperature data inside weatherData
    * - backgroundColor[] set per temperature data
    * - borderColor[] set per temperature data
-   */
+   */  
   useEffect(() => {
     let temperatures = []
     let dates = []
@@ -53,8 +58,7 @@ function BarGraph(props) {
       temperatures.push((item[1][0].temperature - 273.15)* (9/5) + 32) // Kelvin to Fahrenheight
       humidities.push(item[1][0].humidity)
     })
-    
-    console.log(temperatures)
+        
     let domChart = document.querySelector('#myChart')    
     const myChart = new Chart(domChart, {
       type: 'line',
@@ -75,7 +79,7 @@ function BarGraph(props) {
         maintainAspectRatio: false,
       }   
   })
-  return () => myChart.destroy()
+  return () => myChart.destroy()  
   }, [props])
 
   return (
