@@ -1,0 +1,30 @@
+
+.average-page {
+    
+}
+
+.average-header-temp {
+    grid-area: 'one';
+}
+
+.average-temp-calc {
+    grid-area: 'three';
+}
+
+.average-header-humidity {
+    grid-area: 'two';
+}
+
+.average-humidity-calc {
+    grid-area: 'four';
+}
+
+.average-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2;
+    grid-template-areas: 
+        'one' 'two'
+        'three' 'four'
+    ;
+}

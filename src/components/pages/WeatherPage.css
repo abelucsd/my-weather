@@ -43,8 +43,7 @@
 }
 
 .weather-calculations {
-    grid-area: 'two';
-    background-color: aqua;
+    grid-area: 'two';    
     grid-row: 3;
 }
 

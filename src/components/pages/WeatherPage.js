@@ -119,8 +119,7 @@ function WeatherPage() {
             <button onClick={selectOneDay} className='sevenday'>1 Day</button>
             <button onClick={selectFiveDay} className='tenday'>5 Day</button>
         </div>
-        <div className="weather-calculations">
-            <>Pass props to Average</>
+        <div className="weather-calculations">            
             <Average weatherData={weatherData} />
         </div>
         <div className="graph-display">
