@@ -12,8 +12,7 @@ import './BarGraph.css'
  * 
  * @returns A line graph.
  */
-function BarGraph(props) {
-  const [chart, setChart] = useState('')
+function BarGraph(props) {  
 
   /**
    * Initializes a new chart each weather data query.
@@ -28,6 +27,7 @@ function BarGraph(props) {
     let dates = []
     let humidities = []
     
+    // put into separate function
     props.weatherData .forEach( (item, index) => {
       // item[1]: temperature, humidity  
       let dateComponents = item[0].split(" ")
@@ -58,7 +58,8 @@ function BarGraph(props) {
       temperatures.push((item[1][0].temperature - 273.15)* (9/5) + 32) // Kelvin to Fahrenheight
       humidities.push(item[1][0].humidity)
     })
-        
+    
+    /* - Chart - */
     let domChart = document.querySelector('#myChart')    
     const myChart = new Chart(domChart, {
       type: 'line',
@@ -77,6 +78,26 @@ function BarGraph(props) {
       }, 
       options: {
         maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            labels: {
+              color: 'rgb(75, 192, 192)'
+            }
+          }
+        },
+        scales: {
+          x: {            
+            ticks: {
+              color: 'black',
+              
+            },                                             
+          },
+          y: {
+            ticks: {
+              color: 'black'
+            },
+          }
+        }        
       }   
   })
   return () => myChart.destroy()  
