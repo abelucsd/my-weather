@@ -65,7 +65,10 @@ function BarGraph(props) {
           data: temperatures,
           fill: false,
           borderColor: 'rgb(75, 192, 192)',
-          tension: 0.1
+          tension: 0.1,
+          backgroundColor: 'rgba(255, 255, 255, 0.8)',
+          hoverBackgroundColor: 'rgba(75, 192, 192, 1)',
+          
         }]
       }, 
       options: {

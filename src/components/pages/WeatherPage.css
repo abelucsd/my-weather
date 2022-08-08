@@ -13,8 +13,7 @@
 }
 
 .weather-choices {
-    grid-area: 'one';
-    background-color: blue;
+    grid-area: 'one';    
     grid-row: 1 / span 2;
 
     display: flex;
@@ -23,18 +22,18 @@
     gap: .5rem;    
 }
 .city-choice {
-    margin: 0 2rem;
-    border: transparent;
-    border-radius: .3rem;    
+    margin: 1rem 2rem;
+    border: .1rem solid black;
+    border-radius: .3rem;        
 }
-.sevenday {
+.oneday {
     margin: 0 var(--button-margins-side);
     border: var(--button-border);
     border-radius: var(--button-border-radius);    
     align-self: stretch;    
     cursor: pointer;
 }
-.tenday {
+.fiveday {
     margin: 0 var(--button-margins-side);
     border: var(--button-border);
     border-radius: var(--button-border-radius);   

@@ -114,10 +114,9 @@ function WeatherPage() {
   return (
     <div className='weather-page'>
         <div className="weather-choices">
-            <input type="text" className='city-choice' placeholder='City, State' onChange={handleLocationChange} />
-            <>Selected City</>
-            <button onClick={selectOneDay} className='sevenday'>1 Day</button>
-            <button onClick={selectFiveDay} className='tenday'>5 Day</button>
+            <input type="text" className='city-choice' placeholder='City, State' onChange={handleLocationChange} />                        
+            <button onClick={selectOneDay} className='oneday'>1 Day</button>
+            <button onClick={selectFiveDay} className='fiveday'>5 Day</button>
         </div>
         <div className="weather-calculations">            
             <Average weatherData={weatherData} />
