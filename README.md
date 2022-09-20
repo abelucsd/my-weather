@@ -1,5 +1,23 @@
 # My Weather
 
+## Tools and Frameworks
+- React.js
+- Axios.js
+- Express.js
+- Weather API
+
+## Current State
+- Server side
+   * Uses the Weather API to get geo data and weather data based on geo data.
+- Frontend 
+   * Able to get input from user.
+   * Displays weather averages of the place selected.
+   * Displays weather data on a graph.
+- Scalability
+   * User Interface has a toolbar which could include pages in the future.
+   * Graph could be allowed to take various data through additions on the certain Components.
+   * Weather data calculations are made by the developer which makes the data displayed versatile. The API is only used to grab general weather data.
+
 ## Requirements
 
 - Use data from different cities.
